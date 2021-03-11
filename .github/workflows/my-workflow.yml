@@ -21,6 +21,9 @@ jobs:
             body: "🎉 You've created this issue comment using GitHub Script!!!"
             })
 
+
+
+
     - name: Add issue to project board
       if: contains(github.event.issue.labels.*.name, 'bug')
       uses: actions/github-script@0.8.0
@@ -32,6 +35,7 @@ jobs:
             content_id: context.payload.issue.id,
             content_type: "Issue"
             });
+
 
 
 
