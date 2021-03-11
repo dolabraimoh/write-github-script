@@ -6,7 +6,7 @@ on:
 
 jobs:
   comment:
-    runs-on: ubuntu-latest 15.0.0
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@0.8.0
         with:
@@ -18,3 +18,6 @@ jobs:
               repo: context.repo.repo,
               body: "🎉 You've created this issue comment using GitHub Script!!!"
             })
+defaults:
+  run:
+    shell: 
